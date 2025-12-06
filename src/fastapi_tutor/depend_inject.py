@@ -1,6 +1,5 @@
 # 依赖项 示例代码
 
-from typing import Union
 
 from fastapi import Depends, FastAPI
 
@@ -8,7 +7,7 @@ app = FastAPI()
 
 
 async def common_parameters(
-    q: Union[str, None] = None,
+    q: str | None = None,
     skip: int = 0,
     limit: int = 100,
 ):
